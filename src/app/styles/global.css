@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+html,
+body {
+  font-family: "Proxima Nova", arial;
+}
+
 .btn-gradient {
   background: linear-gradient(45deg, #fd267a 0%, #ff6036 100%);
 }
