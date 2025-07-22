@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const PassionsStep = () => {
-  const [selectedPassions, setSelectedPassions] = useState<number[]>([]);
+  const [selectedPassions, setSelectedPassions] = useState<string[]>([]);
 
   const navigate = useNavigate();
   const setPassions = useOnboardingStore((state) => state.setPassions);
@@ -23,12 +23,12 @@ export const PassionsStep = () => {
     navigate("/onboarding/media");
   };
 
-  const onSelectPassion = (id: number) => {
+  const onSelectPassion = (name: string) => {
     setSelectedPassions((prev) => {
-      if (prev.includes(id) && prev.length <= 5) {
-        return prev.filter((passionId) => passionId !== id);
+      if (prev.includes(name) && prev.length <= 5) {
+        return prev.filter((passionName) => passionName !== name);
       }
-      return [...prev, id];
+      return [...prev, name].slice(0, 5);
     });
   };
 
@@ -72,8 +72,8 @@ export const PassionsStep = () => {
                 <Tag
                   key={passion.id}
                   text={passion.name}
-                  isActive={selectedPassions.includes(passion.id)}
-                  onClick={() => onSelectPassion(passion.id)}
+                  isActive={selectedPassions.includes(passion.name)}
+                  onClick={() => onSelectPassion(passion.name)}
                 />
               ))}
             </div>

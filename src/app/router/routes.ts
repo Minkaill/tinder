@@ -3,7 +3,7 @@ export enum ROUTES_PATHS {
   onboardingName = "/onboarding/name",
   onboardingPassions = "/onboarding/passions",
   onboardingMedia = "/onboarding/media",
-  onboardingPreview = "/onboarding/preview",
+  preview = "/preview",
   home = "/",
   notFound = "*",
 }

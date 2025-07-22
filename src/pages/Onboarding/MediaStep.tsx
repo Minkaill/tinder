@@ -85,7 +85,7 @@ export const MediaStep: React.FC = () => {
       toast.error("Please add at least one media item");
       return;
     }
-    navigate(ROUTES_PATHS.onboardingPreview);
+    navigate(ROUTES_PATHS.home);
   };
 
   const onSubmit = async (): Promise<void> => {
