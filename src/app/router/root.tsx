@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ROUTES_PATHS } from "./routes";
-import { MediaStep, NameStep, PassionsStep, PreviewStep } from "@/pages";
+import { Home, MediaStep, NameStep, PassionsStep } from "@/pages";
 
 export const AppRouter: React.FC = () => (
   <BrowserRouter>
@@ -19,10 +19,9 @@ export const AppRouter: React.FC = () => (
         element={<PassionsStep />}
       />
       <Route path={ROUTES_PATHS.onboardingMedia} element={<MediaStep />} />
-      <Route path={ROUTES_PATHS.onboardingPreview} element={<PreviewStep />} />
 
       {/* Главный экран со свайпом */}
-      <Route path={ROUTES_PATHS.home} element={<></>} />
+      <Route path={ROUTES_PATHS.home} element={<Home />} />
 
       {/* Любые другие пути → / */}
       <Route

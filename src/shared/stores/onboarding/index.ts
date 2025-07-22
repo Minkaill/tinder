@@ -3,10 +3,10 @@ import { persist } from "zustand/middleware";
 
 interface OnboardingState {
   name: string;
-  passions: number[];
+  passions: string[];
   media: Array<{ id: number; url: string }>;
   setName: (name: string) => void;
-  setPassions: (ids: number[]) => void;
+  setPassions: (ids: string[]) => void;
   setMedia: (items: Array<{ id: number; url: string }>) => void;
   reset: () => void;
 }

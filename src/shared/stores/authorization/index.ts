@@ -4,7 +4,7 @@ import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 
 interface IUser {
-  passions: number[];
+  passions: string[];
   name: string;
   media: Array<{ id: number; url: string }>;
 }
