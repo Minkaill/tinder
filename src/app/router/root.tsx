@@ -21,7 +21,12 @@ export const AppRouter: React.FC = () => (
       <Route path={ROUTES_PATHS.onboardingMedia} element={<MediaStep />} />
 
       {/* Главный экран со свайпом */}
-      <Route path={ROUTES_PATHS.home} element={<Home />} />
+      <Route
+        path={ROUTES_PATHS.home}
+        element={<Navigate to={ROUTES_PATHS.onboardingName} />}
+      />
+
+      <Route path={ROUTES_PATHS.preview} element={<Home />} />
 
       {/* Любые другие пути → / */}
       <Route
