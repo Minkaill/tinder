@@ -7,5 +7,3 @@ export const NotFoundPage: React.FC = () => (
     <Link to="/">Вернуться на главную</Link>
   </div>
 );
-
-export default NotFoundPage;

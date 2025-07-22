@@ -14,7 +14,7 @@ const queryClient = new QueryClient({
 export const ReactQueryProvider = ({ children }: { children: ReactNode }) => (
   <QueryClientProvider client={queryClient}>
     {children}
-    {process.env.NODE_ENV === "development" && (
+    {process.env.NODE_ENV !== "development" && (
       <ReactQueryDevtools initialIsOpen={false} />
     )}
   </QueryClientProvider>

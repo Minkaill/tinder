@@ -1,1 +1,2 @@
-export { default as NotFound } from "./NotFound";
+export * from "./Onboarding";
+export * from "./NotFound";
