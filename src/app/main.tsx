@@ -4,6 +4,7 @@ import {
   ReactQueryProvider,
   ToastProvider,
 } from "@/app/providers";
+import "@/app/styles/global.css";
 
 export const AppProviders = ({ children }: { children: ReactNode }) => (
   <ErrorBoundaryProvider>
