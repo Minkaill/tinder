@@ -6,6 +6,10 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+export const getUrl = () => {
+  return "";
+};
+
 export const MediaStep: React.FC = () => {
   const [view, setView] = useState<"edit" | "preview">("edit");
   const [activeIndex, setActiveIndex] = useState(0);
